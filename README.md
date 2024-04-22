@@ -23,8 +23,8 @@ La commande "php bin/console app:import-products" permet d'importer tous les fic
 
 ## Aperçu
 
-<img src="imagesGit/racine.jpg" alt="Racine" width="300"/>
-<img src="imagesGit/details.jpg" alt="Racine" width="300"/>
-<img src="imagesGit/creer.jpg" alt="Racine" width="300"/>
-<img src="imagesGit/modifier.jpg" alt="Racine" width="300"/>
+<img src="imagesGit/racine.jpg" alt="Racine" width="500"/>
+<img src="imagesGit/details.jpg" alt="Racine" width="500"/>
+<img src="imagesGit/creer.jpg" alt="Racine" width="500"/>
+<img src="imagesGit/modifier.jpg" alt="Racine" width="500"/>
 
