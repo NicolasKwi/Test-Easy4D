@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Produit index{% endblock %}
+
+{% block body %}
+    <h1 class="m-3 mb-1 fs-4 text-center fw-bold text-decoration-underline">Liste des produits</h1>
+    <div class="my-3" >
+        <a href="{{ path('app_produit_new') }}" class="btn btn-primary" style="box-shadow: 2px 2px 6px rgba(0,0,0,0.2);">Créer un produit</a>
+    </div>
+    <div class="container">
+        <div class="row">
+        {% for produit in produits %}
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="card h-100" style="box-shadow: 2px 2px 6px rgba(0,0,0,0.2);">
+                    <div class="card-header">
+                        {{ produit.Designation }}
+                    </div>
+                    <div class="card-body">             
+                        <p class="card-text">Easy4D Code: {{ produit.Easy4DCode }}</p>
+                        <p class="card-text">EAN Code: {{ produit.EANCode }}</p>
+                        <p class="card-text">Category Tyre Name: {{ produit.CategoryTyreName }}</p>
+                        <p class="card-text">Brand Name: {{ produit.BrandName }}</p>
+                        <p class="card-text">Family Name: {{ produit.FamilyName }}</p>
+                        <p class="card-text">Width: {{ produit.Width }}</p>
+                        <p class="card-text">Height: {{ produit.Height }}</p>
+                        <p class="card-text">Diameter: {{ produit.Diameter }}</p>
+                        <p class="card-text">Construction: {{ produit.Construction }}</p>
+                        <p class="card-text">Load Index: {{ produit.LoadIndex }}</p>
+                        <p class="card-text">Speed Index: {{ produit.SpeedIndex }}</p>
+                        <p class="card-text">Segment: {{ produit.Segment }}</p>
+                        <div>
+                            <a href="{{ path('app_produit_show', {'id': produit.id}) }}" class="btn btn-primary me-2" style="box-shadow: 2px 2px 6px rgba(0,0,0,0.2);">Voir</a>
+                            <a href="{{ path('app_produit_edit', {'id': produit.id}) }}" class="btn btn-secondary" style="box-shadow: 2px 2px 6px rgba(0,0,0,0.2);">Modifier</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <div class="col-12">
+                <p>Aucun produits trouvé.</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    <div class="my-3">
+        <a href="{{ path('app_produit_new') }}" class="btn btn-primary" style="box-shadow: 2px 2px 6px rgba(0,0,0,0.2);">Créer un produit</a>
+    </div>
+{% endblock %}
+
+
